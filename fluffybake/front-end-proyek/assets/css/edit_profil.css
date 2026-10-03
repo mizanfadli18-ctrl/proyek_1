@@ -1,0 +1,138 @@
+:root {
+  --bg-main: #f4e7da;
+  --bg-bar: #5a3b2e;
+  --bg-btn: #483021;
+  --bg-input: #ffffff;
+  --text-light: #ffffff;
+  --text-dark: #000000;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+}
+
+/* ================= HEADER ================= */
+.profile-header {
+  width: 100%;
+  height: 64px;
+  background-color: var(--bg-bar);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.header-title {
+  color: var(--text-light);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* ================= BACK BUTTON (FINAL SESUAI MAU KAMU) ================= */
+/* POSISI: DI BAWAH HEADER, KIRI */
+.back-link {
+  position: absolute;
+  top: 120px;            
+  left: 80px;           
+  width: 25px;
+  height: 25px;
+  z-index: 5;
+}
+
+.back-icon {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ================= MAIN ================= */
+.profile-main {
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px 48px;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 460px;
+}
+
+/* ================= AVATAR ================= */
+.profile-avatar-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+}
+
+/* ================= FORM ================= */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-control {
+  height: 42px;
+  background-color: var(--bg-input);
+  border: none;
+  border-radius: 10px;
+  padding: 0 14px;
+  font-size: 14px;
+  color: var(--text-dark);
+}
+
+/* ================= BUTTON ================= */
+.profile-actions {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.btn-save {
+  width: 160px;
+  height: 40px;
+  background-color: var(--bg-btn);
+  color: var(--text-light);
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-save:hover {
+  background-color: #7a543d;
+}
+
+/* ================= FOOTER ================= */
+.page-footer {
+  width: 100%;
+  height: 48px;
+  background-color: var(--bg-bar);
+}

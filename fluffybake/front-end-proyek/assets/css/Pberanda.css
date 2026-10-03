@@ -1,0 +1,300 @@
+:root {
+  --color-primary: #5a3b2e;
+  --color-background: #f5e9d8;
+  --color-surface: #ffffff;
+  --color-text-light: #ffffff;
+  --color-text-dark: #000000;
+  --color-text-primary: #5a3b2e;
+  --font-family-main: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-main);
+  background-color: var(--color-background);
+  color: var(--color-text-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* ===== HEADER ===== */
+/* ===== HEADER ===== */
+.site-header {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.header-container {
+  display: flex;
+  justify-content: flex-start; /* semua mulai dari kiri */
+  align-items: center;
+  height: 100px;
+  gap: 40px; /* jarak antar elemen */
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+/* logo */
+.header-logo {
+  width: 67px;
+  height: 67px;
+}
+
+/* menu navigasi */
+.header-nav {
+  display: flex;
+  gap: 17px;
+}
+
+.header-nav a {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* ikon akun — perbaikan agar sejajar ke kiri juga */
+.header-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* ❌ hapus margin-left:auto; */
+  /* ✅ tambahkan posisi sejajar kiri */
+  margin-left: 0;
+}
+
+.header-profile img {
+  width: 55px;
+  height: 55px;
+}
+
+@media (max-width: 768px) {
+  .header-left {
+    gap: 20px;
+  }
+  .header-nav a {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-nav a {
+    font-size: 18px;
+  }
+  .header-logo {
+    width: 50px;
+    height: 50px;
+  }
+  .header-profile img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  padding-top: 47px;
+  padding-bottom: 45px;
+}
+
+.hero-section .container {
+  position: relative;
+}
+
+/* perbaikan posisi tombol back */
+.back-arrow {
+  position: absolute;
+  left: 10px;   /* lebih ke kiri */
+  top: -20px;   /* naik lebih ke atas */
+  z-index: 10;  /* pastikan tampil di atas elemen lain */
+}
+
+.whatsapp-link {
+  position: absolute;
+  right: 175px;
+  top: 89px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.store-logo {
+  width: 102px;
+  height: 102px;
+}
+
+.welcome-heading {
+  margin-top: 26px;
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+.store-info-card {
+  margin-top: 26px;
+  background-color: var(--color-surface);
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 894px;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--color-primary);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.info-item {
+  display: flex;
+}
+
+.info-item dt {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.info-item dd {
+  margin-left: 10px;
+}
+
+@media (max-width: 992px) {
+  .whatsapp-link {
+    right: 40px;
+    top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-item {
+    flex-direction: column;
+  }
+  .info-item dt {
+    width: auto;
+  }
+  .info-item dd {
+    margin-left: 0;
+  }
+
+  /* tombol back di layar kecil juga tetap ke kiri dan atas */
+  .back-arrow {
+    left: 5px;
+    top: -5px;
+  }
+
+  .whatsapp-link {
+    right: 20px;
+  }
+}
+
+/* ===== PRODUCTS SECTION ===== */
+.products-section {
+  padding-bottom: 75px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 99px 150px;
+  justify-items: center;
+}
+
+.product-card {
+  background-color: var(--color-surface);
+  width: 160px;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px;
+}
+
+.product-image {
+  width: 116px;
+  height: 117px;
+  object-fit: cover;
+}
+
+.product-description {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text-dark);
+  text-align: left;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .product-card {
+    width: 200px;
+    height: auto;
+    padding: 16px;
+  }
+  .product-image {
+    width: 100%;
+    height: 150px;
+  }
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background-color: var(--color-primary);
+  height: 75px;
+}

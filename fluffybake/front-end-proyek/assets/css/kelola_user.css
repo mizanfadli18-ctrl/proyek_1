@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5e9d8;
+}
+
+
+    .user-management-section {
+        padding: 60px 0;
+    }
+
+    .container {
+        max-width: 1024px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 32px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .page-title {
+        /* style_6 */
+        color: #462e23;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 72px;
+        margin: 0;
+    }
+
+    .add-user-btn {
+        /* style_16 for text, style_7 for bg */
+        background-color: #5a3b2e;
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 24px; /* Adjusted from 32px for better balance */
+        line-height: 1.5;
+        text-decoration: none;
+        padding: 10px 28px;
+        border-radius: 10px;
+        white-space: nowrap;
+        transition: background-color 0.3s;
+    }
+
+    .add-user-btn:hover {
+        background-color: #462e23;
+    }
+
+    .table-container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        overflow-x: auto; /* For horizontal scrolling on small screens */
+    }
+
+    .user-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 800px;
+    }
+
+    .user-table th,
+    .user-table td {
+        padding: 20px 16px;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    .user-table thead {
+        /* style_7 */
+        background-color: #5a3b2e;
+    }
+
+    .user-table th {
+        /* style_8 */
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 20px; /* Adjusted from 24px for better balance */
+        line-height: 36px;
+    }
+
+    .user-table th:first-child,
+    .user-table td:first-child,
+    .user-table th:nth-child(4), 
+    .user-table td:nth-child(4),
+    .user-table th:nth-child(5), 
+    .user-table td:nth-child(5),
+    .user-table th:last-child,
+    .user-table td:last-child {
+        text-align: center;
+    }
+
+    .user-table tbody tr {
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .user-table tbody tr:last-child {
+        border-bottom: none;
+    }
+
+    .user-table td {
+        /* style_10 */
+        color: #000000;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .user-table .cell-no {
+        /* style_9 */
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .user-table td a {
+        color: #000000;
+        text-decoration: underline;
+    }
+
+    .user-table td a:hover {
+        color: #5a3b2e;
+    }
+
+    .cell-actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .action-btn {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        text-decoration: none;
+        padding: 4px 16px;
+        border-radius: 5px;
+        display: inline-block;
+        transition: opacity 0.2s;
+    }
+
+    .action-btn:hover {
+        opacity: 0.8;
+    }
+
+    .edit-btn {
+        /* style_13 for text, style_1 for bg */
+        background-color: #f5e9d8;
+        color: #000000;
+    }
+
+    .delete-btn {
+        /* style_15 for text, style_14 for bg */
+        background-color: #5a3b2e;
+        color: #ffffff;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .page-header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .page-title {
+            font-size: 36px;
+            line-height: 1.2;
+        }
+
+        .add-user-btn {
+            font-size: 18px;
+            padding: 10px 20px;
+        }
+
+        .user-table th {
+            font-size: 16px;
+        }
+
+        .user-table td {
+            font-size: 14px;
+        }
+        
+        .user-table .cell-no {
+            font-size: 16px;
+        }
+    }

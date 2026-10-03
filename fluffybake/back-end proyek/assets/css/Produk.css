@@ -1,0 +1,259 @@
+/* ===========================
+   WARNA UTAMA & TEMA
+   =========================== */
+:root {
+  --bg-main: #f5e9d8; /* background lembut */
+  --brown-dark: #4b2e1f; /* coklat tua */
+  --brown-medium: #5a3b2e;
+  --brown-light: #7a543d;
+  --accent-yellow: #fbdf05;
+  --text-dark: #000;
+  --text-light: #fff;
+}
+
+/* ===========================
+   DASAR BODY & PAGE
+   =========================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ===========================
+   HEADER ATAS (BAR)
+   =========================== */
+.page-header {
+  background-color: var(--brown-medium);
+  color: var(--text-light);
+  padding: 12px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* Kontainer isi header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-img {
+  width: 120px;
+  height: auto;
+}
+
+/* Menu Navigasi */
+.menu-nav {
+  display: flex;
+  gap: 20px;
+}
+.menu-nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  transition: 0.3s;
+}
+.menu-nav a:hover {
+  color: var(--accent-yellow);
+}
+.menu-nav a.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--accent-yellow);
+  border-radius: 2px;
+}
+
+/* Profil kanan */
+.profile-area {
+  display: flex;
+  align-items: center;
+}
+.profile-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-yellow);
+}
+
+/* ===========================
+   BAGIAN UTAMA (KONTEN PRODUK)
+   =========================== */
+.main-container {
+  padding: 30px 50px;
+}
+
+h2 {
+  font-size: 28px;
+  color: var(--brown-dark);
+  margin-top: 10px;
+}
+
+/* Tombol Tambah Produk */
+.btn-tambah {
+  display: inline-block;
+  background-color: var(--accent-yellow);
+  color: var(--text-dark);
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  margin: 15px 0;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+  transition: 0.2s;
+}
+.btn-tambah:hover {
+  background-color: #ffe12e;
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   TABEL PRODUK
+   =========================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+th {
+  background-color: var(--brown-dark);
+  color: var(--text-light);
+  padding: 14px 12px;
+  text-align: left;
+  font-size: 16px;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e0d6c7;
+  vertical-align: top;
+  font-size: 15px;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f5f0;
+}
+
+img {
+  border-radius: 8px;
+  width: 80px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Kolom aksi (edit & delete) */
+.aksi {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.aksi a {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--brown-dark);
+  transition: 0.2s;
+}
+.aksi a:hover {
+  color: var(--brown-light);
+  transform: scale(1.2);
+}
+
+/* ===========================
+   RESPONSIVE STYLE
+   =========================== */
+@media (max-width: 1024px) {
+  .main-container {
+    padding: 20px 25px;
+  }
+
+  .menu-nav a {
+    font-size: 14px;
+  }
+
+  th, td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .logo-img {
+    width: 100px;
+  }
+
+  .profile-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .menu-nav {
+    margin-top: 10px;
+    gap: 15px;
+  }
+
+  .main-container {
+    padding: 15px;
+  }
+
+  table {
+    font-size: 13px;
+  }
+
+  img {
+    width: 60px;
+  }
+
+  .btn-tambah {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+}
+
+/* ===========================
+   FOOTER (opsional)
+   =========================== */
+.page-footer {
+  background-color: var(--brown-medium);
+  height: 60px;
+  width: 100%;
+  margin-top: 60px;
+}

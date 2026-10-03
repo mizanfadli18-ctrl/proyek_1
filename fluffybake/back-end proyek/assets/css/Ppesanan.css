@@ -1,0 +1,302 @@
+/* ======== RESET & GLOBAL ======== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f5e9d8;
+  color: #2b2b2b;
+}
+
+main {
+  flex-grow: 1;
+}
+
+/* ======== HEADER ======== */
+.site-header {
+  background-color: #5a3b2e;
+  padding: 0 50px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 88px;
+}
+
+.logo {
+  width: 67px;
+  height: 67px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 39px;
+}
+
+.nav-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 9px 29px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link.active {
+  background-color: #e98c58;
+}
+
+.nav-link:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.user-icon {
+  width: 55px;
+  height: 55px;
+}
+
+/* ======== RESPONSIVE HEADER ======== */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 0 20px;
+    height: auto;
+    min-height: 80px;
+  }
+
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  .header-left {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .main-nav {
+    gap: 15px;
+  }
+
+  .nav-link {
+    font-size: 24px;
+    padding: 8px 16px;
+  }
+}
+
+/* ======== SECTION PESANAN ======== */
+.orders-section {
+  padding: 46px 85px 50px;
+}
+
+/* ======== PAGE TITLE ======== */
+.page-title {
+  margin-bottom: 20px;
+}
+
+.page-title h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #5a3b2e;
+  margin: 0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 46px;
+}
+
+.back-link img {
+  width: 25px;
+  height: 50px;
+}
+
+/* ======== TABLE CONTAINER ======== */
+.orders-table-container {
+  overflow-x: hidden;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0;
+}
+
+/* ======== TABEL PESANAN ======== */
+.orders-table {
+  display: grid;
+  grid-template-columns:
+    50px        
+    1.2fr       
+    1.6fr      
+    0.9fr       
+    1.6fr       
+    1.3fr       
+    2fr;      
+  width: 100%;
+}
+
+/* Header dan data baris */
+.table-header,
+.table-row {
+  display: contents;
+}
+
+/* ======== HEADER ======== */
+.header-cell {
+  background-color: #5a3b2e;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  min-height: 64px;
+  border: none;
+  padding: 14px 12px;
+}
+
+/* ======== ISI DATA ======== */
+.data-cell {
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: 600;
+  font-size: 14px;
+  min-height: auto;
+  padding: 14px 12px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-row > .data-cell {
+  min-height: 60px;
+}
+
+/* Rata kiri untuk kolom teks */
+.data-cell[data-label="Nama Pembeli"],
+.data-cell[data-label="Nama Produk"],
+.data-cell[data-label="Alamat"],
+.data-cell[data-label="No Telepon"] {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+/* ======== KOLOM AKSI ======== */
+.action-cell {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.action-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  background-color: #fbdf05;
+  color: #2b2b2b;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: center;
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.action-btn:hover {
+  background-color: #f3cf00;
+}
+
+.btn-reject {
+  width: 96px;
+}
+
+/* ======== RESPONSIVE TABLE ======== */
+@media (max-width: 1200px) {
+  .orders-section {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .orders-table-container {
+    overflow-x: visible;
+  }
+
+  .orders-table {
+    display: block;
+    background-color: transparent;
+    min-width: 0;
+  }
+
+  .table-header {
+    display: none;
+  }
+
+  .table-row {
+    display: block;
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .data-cell {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    min-height: auto;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 16px;
+  }
+
+  .data-cell:last-child {
+    border-bottom: none;
+  }
+
+  .data-cell::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #5a3b2e;
+    margin-right: 10px;
+    flex-shrink: 0;
+  }
+
+  .action-cell {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .action-cell::before {
+    align-self: center;
+  }
+}
+
+/* ======== FOOTER ======== */
+.site-footer-bottom {
+  background-color: #5a3b2e;
+  height: 75px;
+  width: 100%;
+}

@@ -1,0 +1,149 @@
+:root {
+  --brand-brown: #5a3b2e;
+  --brand-cream: #f5e9d8;
+  --brand-white: #ffffff;
+  --font-main: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--brand-cream);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Wrapper halaman */
+.page-wrapper {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 100vh;
+  background-color: var(--brand-cream);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* HEADER */
+.site-header {
+  background-color: var(--brand-brown);
+  width: 100vw;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.login-form-container {
+  max-width: 360px;
+  margin: auto;
+  text-align: center;
+}
+
+.logo {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  margin: 0 auto 40px;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: var(--brand-brown);
+  border-radius: 12px;
+  padding: 0 18px;
+  margin-bottom: 20px;
+}
+
+.input-icon {
+  margin-right: 12px;
+}
+
+/* === FIX: Ikon Email & Password lebih kecil dan sejajar === */
+.input-group img.email-icon,
+.input-group img.password-icon {
+  width: 24px !important;
+  height: 24px !important;
+  object-fit: contain !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin-right: 10px !important;
+  filter: brightness(0) invert(1); /* membuat ikon tampak putih */
+}
+
+.form-control {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--brand-white);
+  font-size: 16px;
+}
+
+.form-control::placeholder {
+  color: var(--brand-white);
+}
+
+/* BUTTON */
+.btn {
+  background-color: var(--brand-brown);
+  color: var(--brand-white);
+  width: 100%;
+  height: 50px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn-google img {
+  width: 26px;
+  height: auto;
+}
+
+.btn-register {
+  text-decoration: none;
+  color: var(--brand-white);
+}
+
+.separator {
+  font-size: 14px;
+  margin: 10px 0;
+  color: var(--brand-brown);
+}
+
+/* FOOTER */
+.site-footer {
+  background-color: var(--brand-brown);
+  width: 100vw;
+  height: 60px;
+  flex-shrink: 0;
+}

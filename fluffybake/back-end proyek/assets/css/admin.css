@@ -1,0 +1,19 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+h1 {
+  color: #5a3b2e;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+ul li a:hover {
+  color: #d49a64;
+}

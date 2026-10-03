@@ -1,0 +1,174 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f5e9d8;
+  color: #000000;
+}
+
+
+.payment-success-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 55px;
+  left: 61px;
+  display: block;
+}
+
+.back-button img {
+  width: 25px;
+  height: auto;
+  display: block;
+}
+
+.success-card {
+  background-color: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  max-width: 615px;
+  width: 100%;
+  padding: 68px 40px 110px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.checkmark-img {
+  width: 290px;
+  height: 135px;
+  object-fit: contain;
+  margin-bottom: 43px;
+}
+
+.success-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: #000000;
+  margin: 0 0 96px 0;
+  line-height: 1.2;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 47px;
+  width: 100%;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 266px;
+  height: 68px;
+  background-color: #fbdf05;
+  color: #2b2b2b;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  .back-button {
+    top: 30px;
+    left: 30px;
+  }
+
+  .success-card {
+    padding: 50px 30px 70px;
+  }
+
+  .success-title {
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
+
+  .checkmark-img {
+    width: 220px;
+    height: auto;
+    margin-bottom: 35px;
+  }
+
+  .button-group {
+    gap: 30px;
+  }
+
+  .btn {
+    font-size: 24px;
+    width: 240px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .payment-success-page {
+    align-items: flex-start;
+    padding-top: 80px;
+  }
+
+  .back-button {
+    top: 20px;
+    left: 20px;
+  }
+
+ .success-card {
+  background-color: #ffffff;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  /* PERUBAHAN UTAMA: Kecilkan MAX-WIDTH */
+  max-width: 380px; /* Diubah dari 615px/400px menjadi 380px */
+  width: 100%;
+  /* PERUBAHAN: Kecilkan Padding */
+  padding: 40px 20px 60px; /* Dikurangi lagi agar lebih ramping */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+  .success-title {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .checkmark-img {
+  /* PERUBAHAN UTAMA: Kecilkan Lebar Ikon */
+  width: 100px; /* Diubah dari 290px menjadi 100px */
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 30px; /* Sedikit dikurangi */
+}
+
+  .button-group {
+    gap: 20px;
+  }
+
+  .btn {
+    font-size: 18px;
+    width: 200px;
+    height: 50px;
+  }
+}

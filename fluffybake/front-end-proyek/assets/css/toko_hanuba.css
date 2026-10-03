@@ -1,0 +1,105 @@
+:root {
+  --bg-main: #f5e9d8;
+  --bg-white: #fff;
+  --color-dark: #5a3b2e;
+  --color-btn: #fbdf05;
+  --font-main: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-main);
+}
+
+.store-content { padding: 40px 70px; }
+
+.store-profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.store-logo { width: 120px; border-radius: 50%; }
+.store-name { font-size: 32px; font-weight: bold; color: var(--color-dark); }
+
+.store-description {
+  background-color: var(--bg-white);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+.product-card {
+  background-color: var(--bg-white);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  display: flex;
+  gap: 12px;
+  width: 360px;
+}
+
+.product-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.product-title { font-size: 16px; font-weight: 600; margin: 0; }
+.product-price { color: var(--color-dark); font-weight: bold; margin: 5px 0 10px; }
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quantity-btn {
+  background-color: var(--color-dark);
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.btn-add-cart {
+  background-color: var(--color-btn);
+  padding: 5px 15px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.cart-notification{
+  position:fixed;top:20px;right:20px;background:var(--dark);color:#fff;
+  padding:12px 18px;border-radius:10px;z-index:9999;
+  animation:fadeInOut 2s ease forwards
+}
+.cart-notification.error{background:#c0392b}
+@keyframes fadeInOut{
+  0%{opacity:0;transform:translateY(-10px)}
+  15%{opacity:1;transform:translateY(0)}
+  85%{opacity:1}
+  100%{opacity:0;transform:translateY(-10px)}
+}
+
+/* Responsif */
+@media (max-width:1100px){ .product-grid{grid-template-columns:repeat(2,1fr)} }
+@media (max-width:700px){
+  .store-content{padding:24px}
+  .product-grid{grid-template-columns:1fr}
+  .product-card{width:100%}
+}
+/* Back button (perkecil & rapi) */
+.back-link img {
+  width: 36px;   /* sebelumnya besar */
+  height: auto;
+}

@@ -1,0 +1,152 @@
+:root {
+  --primary-bg: #f5e9d8;
+  --primary-text: #5a3b2e;
+  --accent-color: #d49a64;
+  --price-color: #e09b00;
+  --button-bg: #fbdf05;
+  --button-text: #000;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}
+
+/* ------- DETAIL PRODUK CONTAINER ------- */
+.product-details-section {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.product-details-content {
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  background-color: var(--primary-bg);
+}
+
+/* Tombol Back */
+.back-link {
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+.back-icon {
+  width: 32px;
+  cursor: pointer;
+}
+
+/* Gambar Produk */
+.product-image {
+  max-width: 200px;
+  margin: 0 auto;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Judul */
+.product-title {
+  font-size: 22px;
+  margin: 15px 0 10px;
+  font-weight: bold;
+  color: var(--primary-text);
+}
+
+/* Deskripsi */
+.product-description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+/* Harga */
+.product-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--price-color);
+  margin: 15px 0;
+}
+
+/* ------- TOMBOL & QUANTITY ------- */
+.product-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+/* Quantity Container */
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #dac7b2;
+}
+
+/* Tombol Quantity */
+.quantity-btn {
+  background-color: #5a3b2e;
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 28px;
+}
+
+.quantity-btn:hover {
+  background-color: #7b503a;
+}
+
+.quantity-value {
+  font-size: 18px;
+  font-weight: bold;
+  min-width: 20px;
+  text-align: center;
+  color: var(--primary-text);
+}
+
+/* Tombol Add to Cart */
+.add-to-cart-btn {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #ffe733;
+  transform: scale(1.05);
+}
+
+/* ------- Alamat ------- */
+.address-info {
+  margin-top: 25px;
+  font-size: 15px;
+  text-align: left;
+  line-height: 1.6;
+  padding: 0 15px;
+}
+
+/* ------- Footer Kosong (jika pakai) ------- */
+.site-footer {
+  height: 50px;
+  background-color: var(--header-bg);
+  margin-top: 50px;
+}

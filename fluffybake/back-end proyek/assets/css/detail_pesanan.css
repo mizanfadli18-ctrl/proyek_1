@@ -1,0 +1,103 @@
+:root {
+    --bg: #f5e9d8;
+    --white: #ffffff;
+    --dark: #5a3b2e;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    font-family: "Inter", sans-serif;
+}
+
+/* PAGE */
+.detail-page {
+    max-width: 900px;           /* lebih kecil */
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* BACK */
+.back-link img {
+    width: 26px;
+    margin-bottom: 20px;
+}
+
+/* TITLE */
+.title {
+    text-align: center;
+    font-size: 32px;            /* diperkecil */
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+/* CARD */
+.detail-card {
+    display: flex;
+    gap: 30px;                  /* jarak lebih rapih */
+    background: var(--white);
+    padding: 30px;
+    border-radius: 18px;
+    align-items: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+/* IMAGE */
+.product-image {
+    width: 220px;               /* gambar diperkecil */
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+/* TEXT */
+.detail-right p {
+    font-size: 17px;            /* teks lebih kecil */
+    margin: 8px 0;
+    color: #333;
+}
+
+.detail-right strong {
+    color: var(--dark);
+}
+
+/* STATUS */
+.status {
+    font-weight: 700;
+    color: green;
+}
+
+/* BUTTON */
+.wa-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 9px 22px;
+    background: #25d366;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.wa-button + .wa-button {
+    margin-left: 10px;
+}
+
+/* RESPONSIVE (HP) */
+@media (max-width: 768px) {
+    .detail-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-image {
+        width: 180px;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    .detail-right p {
+        font-size: 16px;
+    }
+}

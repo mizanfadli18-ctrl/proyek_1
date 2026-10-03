@@ -1,0 +1,222 @@
+:root {
+  --primary-bg: #f5e9d8;
+  --primary-text: #5a3b2e;
+  --header-bg: #5a3b2e;
+  --header-text: #ffffff;
+  --accent-yellow: #fbdf05;
+  --accent-brown: #d49a64;
+  --card-bg: #ffffff;
+}
+
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--primary-bg);
+  color: var(--primary-text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===== HEADER KHUSUS PESANAN (RINGKAS) ===== */
+.site-header {
+  background: var(--header-bg);
+}
+
+.header-container {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  /* INI KUNCI */
+  padding: 8px 16px;
+  min-height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo img {
+  width: 44px;
+  height: 44px;
+}
+
+.main-nav {
+  flex: 1;                /* ⬅️ KUNCI */
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--header-text);
+}
+
+.main-nav a.active {
+  background: var(--accent-brown);
+  padding: 6px 14px;
+  border-radius: 12px;
+}
+
+/* IKON KANAN */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header-right img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ===== PESANAN ===== */
+.order-details-section {
+  padding: 30px 0;
+}
+
+.order-container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 16px;
+  position: relative;
+}
+
+/* BACK BUTTON — JAUH KE KIRI */
+.back-link {
+  position: absolute;
+  left: -180px;   /* TIDAK MEPET CARD */
+  top: 12px;
+}
+
+.back-link img {
+  width: 26px;
+}
+
+/* ===== CARD PESANAN ===== */
+.order-card {
+  background: white;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.product-image {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.order-info {
+  flex: 1;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.quantity-display,
+.total-price,
+.buyer-name {
+  font-size: 13px;
+  margin: 4px 0;
+}
+
+/* ===== TOMBOL TENGAH (INI YANG TADI SALAH) ===== */
+.order-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  gap: 10px;
+}
+
+.action-button {
+  width: 160px;
+  height: 40px;
+
+  display: flex;              
+  align-items: center;        
+  justify-content: center;    
+
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  background: var(--accent-yellow);
+  cursor: pointer;
+
+  padding: 0;                 
+  line-height: 1;             
+  text-align: center;
+}
+
+/* ===== TOKO ===== */
+.store-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0 24px;
+}
+
+.store-info h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.store-info img {
+  width: 22px;
+  height: 22px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .order-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .order-actions {
+    width: 100%;
+  }
+
+  .action-button {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .back-link {
+    position: static;
+    margin-bottom: 12px;
+  }
+}

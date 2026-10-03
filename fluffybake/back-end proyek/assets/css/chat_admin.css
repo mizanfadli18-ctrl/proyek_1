@@ -1,0 +1,95 @@
+/* CONTAINER UTAMA */
+.chat-container {
+    background: #f5e9d8;
+    padding: 20px;
+    border-radius: 14px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* HEADER CHAT */
+.chat-header {
+    background: #5A3B2E;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* BOX CHAT */
+.chat-box {
+    height: 320px;               /* diperkecil */
+    overflow-y: auto;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* CHAT SAYA */
+.chat-me {
+    background: #d0ffd0;
+    padding: 10px 14px;
+    border-radius: 14px 14px 0 14px;
+    align-self: flex-end;
+    max-width: 65%;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* CHAT LAWAN */
+.chat-other {
+    background: #ffe1c2;
+    padding: 10px 14px;
+    border-radius: 14px 14px 14px 0;
+    align-self: flex-start;
+    max-width: 65%;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* INPUT */
+.chat-input {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.chat-input input:focus {
+    outline: none;
+    border-color: #5A3B2E;
+}
+
+/* BUTTON KIRIM */
+.chat-input button {
+    padding: 10px 18px;
+    background: #5A3B2E;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    opacity: 0.9;
+}
+
+/* TOMBOL BACK (KECIL & RAPIH) */
+.back-link img {
+    width: 28px;      /* DIPERKECIL */
+    height: auto;
+}

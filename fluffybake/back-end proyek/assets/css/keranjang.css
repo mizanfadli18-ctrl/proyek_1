@@ -1,0 +1,357 @@
+:root {
+  --bg-main: #f5e9d8;
+  --bg-dark: #5a3b2e;
+  --text-dark: #5a3b2e;
+  --text-light: #ffffff;
+  --text-body: #2b2b2b;
+  --accent-yellow: #fbdf05;
+  --accent-brown: #d49a64;
+  --bg-light: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+  .site-header {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    position: relative;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 105px;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .logo {
+    position: absolute;
+    top: -21px; /* (Header y -4659) - (Logo y -4680) */
+    left: 64px; /* (Header x -180) - (Logo x -116) */
+    width: 133px;
+    height: 133px;
+  }
+
+  .main-nav {
+    margin-left: 197px; /* (Beranda x 17) - (Logo x -116) + logo width approx */
+  }
+
+  .main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+  }
+
+  .main-nav a {
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .cart-icon-wrapper {
+    background-color: var(--accent-brown);
+    border-radius: 11px;
+    width: 89px;
+    height: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cart-icon-wrapper img {
+    width: 43px;
+  }
+
+  .header-right > a:not(.cart-icon-wrapper) img {
+    width: auto;
+    height: 33px;
+  }
+
+  @media (max-width: 1200px) {
+    .main-nav {
+      margin-left: 100px;
+    }
+    .main-nav ul {
+      gap: 30px;
+    }
+    .header-right {
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .main-nav {
+      display: none; /* Hide nav on smaller screens for simplicity */
+    }
+    .header-left {
+      gap: 0;
+    }
+    .logo {
+      position: static;
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header-container {
+      height: 80px;
+    }
+    .header-right {
+      gap: 20px;
+    }
+    .cart-icon-wrapper {
+      width: 60px;
+      height: 40px;
+    }
+    .cart-icon-wrapper img {
+      width: 30px;
+    }
+    .header-right > a:not(.cart-icon-wrapper) img {
+      height: 24px;
+    }
+  }
+
+
+
+  .cart-page .container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 40px;
+  }
+  
+  .back-link img {
+    width: 25px;
+  }
+
+  .cart-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 111px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .item-info {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .item-checkbox {
+    width: 68px;
+  }
+
+  .item-image {
+    width: 135px;
+    height: 136px;
+    object-fit: cover;
+  }
+
+  .item-details .item-name,
+  .item-details .item-price {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  
+  .item-details .item-name {
+    margin-bottom: 9px;
+  }
+
+  .item-controls {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .quantity-selector {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-light);
+    padding: 10px;
+    gap: 28px;
+  }
+
+  .quantity-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .quantity-btn img {
+    width: auto;
+    height: 33px;
+  }
+  
+  .quantity-selector .quantity-btn:first-of-type img {
+      height: auto;
+      width: 52px;
+  }
+
+
+  .quantity-value {
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .delete-btn img {
+    width: 45px;
+  }
+
+  .cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 102px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .total-price span {
+    margin-left: 100px;
+  }
+
+  .checkout-action {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .checkout-button {
+    display: inline-block;
+    background-color: var(--accent-yellow);
+    color: var(--text-body);
+    font-size: 32px;
+    font-weight: 600;
+    padding: 25px 50px;
+    text-align: center;
+  }
+
+  @media (max-width: 1200px) {
+    .cart-item {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cart-page .container {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    .cart-item {
+      flex-direction: column;
+      align-items: stretch;
+      margin-bottom: 60px;
+    }
+    .item-info {
+      gap: 20px;
+    }
+    .item-checkbox {
+      width: 40px;
+    }
+    .item-image {
+      width: 100px;
+      height: 100px;
+    }
+    .item-details .item-name,
+    .item-details .item-price {
+      font-size: 24px;
+    }
+    .item-controls {
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .cart-summary {
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 28px;
+      margin-bottom: 60px;
+    }
+    .total-price span {
+      margin-left: 20px;
+    }
+    .checkout-action {
+      justify-content: center;
+    }
+    .checkout-button {
+      width: 100%;
+      font-size: 24px;
+      padding: 20px;
+    }
+  }
+
+
+
+  .site-footer {
+    background-color: var(--bg-dark);
+    height: 87px;
+  }

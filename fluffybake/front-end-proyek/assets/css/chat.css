@@ -1,0 +1,145 @@
+/* ===============================
+   RESET & GLOBAL
+================================ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #F5E9D8;
+  font-family: Arial, sans-serif;
+}
+
+/* ===============================
+   BACK BUTTON
+================================ */
+.back-link {
+  display: inline-block;
+  margin: 12px 0 8px 16px;
+}
+
+.back-link img {
+  width: 22px;
+}
+
+/* ===============================
+   CHAT CARD (SAMA BACKEND)
+================================ */
+.chat-container {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  background: #F5E9D8;
+  padding: 16px;
+  border-radius: 16px;
+}
+
+/* ===============================
+   HEADER CHAT
+================================ */
+.chat-header {
+  background: #5A3B2E;
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* ===============================
+   CHAT BOX
+================================ */
+.chat-box {
+  background: #ffffff;
+  height: 320px;
+  border-radius: 14px;
+  padding: 14px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   BUBBLE CHAT (INTI MASALAH)
+================================ */
+.chat-me,
+.chat-other {
+  max-width: 55%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  line-height: 1.4;
+  display: inline-block;
+  clear: both;
+}
+
+/* PESAN PEMBELI (KIRI – KREM) */
+.chat-me {
+  background: #fde6c8;
+  float: left;
+  text-align: left;
+}
+
+/* PESAN PENJUAL (KANAN – HIJAU BACKEND) */
+.chat-other {
+  background: #d9fdd3;
+  float: right;
+  text-align: left;
+}
+
+/* TEKS PESAN */
+.chat-me p,
+.chat-other p {
+  margin: 0;
+  padding: 0;
+}
+
+/* WAKTU PESAN */
+.chat-me span,
+.chat-other span {
+  display: block;
+  font-size: 11px;
+  margin-top: 4px;
+  color: #666;
+}
+
+/* ===============================
+   INPUT CHAT
+================================ */
+.chat-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.chat-input button {
+  padding: 10px 16px;
+  background: #5A3B2E;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ===============================
+   SCROLLBAR HALUS
+================================ */
+.chat-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background: #d1b9a3;
+  border-radius: 6px;
+}

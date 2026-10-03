@@ -1,0 +1,209 @@
+:root {
+  --primary-bg: #f5e9d8;
+  --secondary-bg: #5a3b2e;
+  --text-light: #ffffff;
+  --text-dark: #5a3b2e;
+  --page-bg: #f6f2f2;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--page-bg);
+  color: var(--text-dark);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a, button {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+/* Bagian Kontainer Utama */
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Hapus padding 2rem agar login-page-wrapper bisa full-screen di desktop jika mau */
+}
+
+/* PERBAIKAN: Mengatur lebar agar tampilan login mengisi layar */
+.login-page-wrapper {
+    /* Tambahkan ini untuk membuat wrapper mengisi seluruh layar */
+    width: 100%; 
+    min-height: 100vh;
+    background-color: var(--secondary-bg); /* Warna latar belakang coklat seperti di Gambar 2 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Pastikan tidak ada padding di wrapper */
+}
+
+.login-container {
+  background-color: var(--primary-bg);
+  border-radius: 0; /* Hapus border-radius agar full-width (seperti Gambar 2) */
+  overflow: hidden;
+  width: 100%; /* Gunakan full width */
+  max-width: none; /* Hapus batasan max-width */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: none; /* Hapus shadow agar menyatu dengan latar belakang */
+  min-height: 100vh; /* Agar container minimal setinggi layar */
+}
+
+/* Bagian Header */
+.login-header {
+  background-color: var(--secondary-bg);
+  color: var(--text-light);
+  text-align: center;
+  height: 81px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  /* PERBAIKAN: Tambahkan position: relative agar back-arrow bisa diposisikan di dalamnya */
+  position: relative; 
+}
+
+.login-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+/* PERBAIKAN: Mengatur Panah Kembali agar berada di dalam header */
+.back-link {
+  position: absolute;
+  top: 80px; /* sesuaikan jarak dari atas header */
+  left: 30px; /* agar menempel ke kiri */
+  display: inline-block;
+}
+
+.back-icon {
+  width: 28px;
+  cursor: pointer;
+}
+
+/* Bagian Body/Konten Login */
+.login-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Sesuaikan padding atas/bawah agar konten lebih terpusat */
+  padding: 20px 5px; 
+  flex-grow: 1;
+}
+
+.logo {
+  width: 210px; /* Sedikit dikecilkan agar mirip Gambar 2 */
+  height: 210px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* PERBAIKAN: Ubah max-width agar form terlihat lebih lebar/panjang ke bawah */
+  max-width: 400px; 
+}
+
+/* Field Input dan Tombol */
+.form-field {
+  background-color: var(--secondary-bg);
+  border-radius: 20px;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  color: var(--text-light);
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.field-icon {
+  margin-right: 12px;
+}
+
+.btn {
+  background-color: var(--secondary-bg);
+  border-radius: 20px;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-signin {
+  color: var(--text-light);
+  font-size: 24px;
+  font-weight: 500;
+  /* Hapus background-image yang tidak perlu */
+  /* background-image: url("${ASSET_PATH}/171_8.svg");
+  background-size: cover;
+  background-position: center; */
+  margin-bottom: 16px; /* Tambahkan jarak dari OR */
+}
+
+.separator {
+  color: var(--text-dark);
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.btn-google img {
+  width: 37px;
+  height: 37px;
+}
+
+/* Bagian Footer */
+.login-footer {
+  background-color: var(--secondary-bg);
+  height: 75px;
+  flex-shrink: 0;
+  width: 100%; /* Pastikan footer full-width */
+}
+
+
+/* Media Queries untuk Layar Kecil (Mobile) */
+
+/* Hapus media query 1440px karena sudah diatasi oleh .back-arrow yang baru */
+/* Hapus media query 768px dan 480px yang lama, dan ganti dengan penyesuaian sederhana */
+
+@media (max-width: 768px) {
+    .login-container {
+        border-radius: 0; /* Pastikan tidak ada radius */
+        min-height: 100vh;
+    }
+    .login-body {
+        padding: 50px 20px;
+    }
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+    .login-header h1 {
+        font-size: 28px;
+    }
+    .form-field, .btn {
+        height: 56px;
+        font-size: 20px;
+        margin-bottom: 24px;
+    }
+}

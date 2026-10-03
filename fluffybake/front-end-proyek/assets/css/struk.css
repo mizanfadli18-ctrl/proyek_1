@@ -1,0 +1,140 @@
+:root {
+  --color-background: #f5e9d8;
+  --color-card-bg: #f6f2f2;
+  --color-primary: #fbdf05;
+  --color-text-dark: #2b2b2b;
+  --color-text-black: #000000;
+  --font-family-main: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-main);
+  background-color: var(--color-background);
+  color: var(--color-text-black);
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+
+  .page-header {
+    padding-top: 40px;
+    padding-bottom: 28px;
+  }
+  .back-arrow-icon {
+    width: 25px;
+    height: 50px;
+  }
+
+
+
+  .details-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .details-card {
+    background-color: var(--color-card-bg);
+    width: 100%;
+    max-width: 835px;
+    padding: 32px 40px;
+    box-sizing: border-box;
+  }
+  .details-list {
+    margin: 0;
+    display: grid;
+    row-gap: 30px;
+  }
+  .detail-item {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .detail-item dt,
+  .detail-item dd {
+    margin: 0;
+  }
+  .detail-item dd {
+    word-break: break-word;
+  }
+
+  @media (max-width: 768px) {
+    .details-card {
+      padding: 24px;
+    }
+    .detail-item {
+      grid-template-columns: 1fr;
+      gap: 8px;
+      font-size: 18px;
+    }
+    .detail-item dd {
+      padding-left: 1em; /* Indent value for clarity */
+    }
+  }
+  @media (max-width: 480px) {
+    .detail-item {
+      font-size: 16px;
+    }
+  }
+
+
+
+  .actions-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 137px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+  .action-btn {
+    background-color: var(--color-primary);
+    color: var(--color-text-dark);
+    border: none;
+    width: 134px;
+    height: 68px;
+    font-family: var(--font-family-main);
+    font-size: 24px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+  @media (max-width: 768px) {
+    .actions-container {
+      gap: 40px;
+    }
+    .action-btn {
+      width: 120px;
+      height: 60px;
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .actions-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .action-btn {
+      width: 80%;
+      max-width: 250px;
+      height: 50px;
+    }
+  }

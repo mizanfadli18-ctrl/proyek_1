@@ -1,0 +1,276 @@
+:root {
+  --bg-main: #f5e9d8;
+  --bg-dark: #5a3b2e;
+  --bg-light: #ffffff;
+  --bg-accent: #d49a64;
+  --btn-primary: #fbdf05;
+  --text-dark: #5a3b2e;
+  --text-light: #ffffff;
+  --text-body: #000000;
+  --text-btn: #2b2b2b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.page-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.site-header {
+  background-color: var(--bg-dark);
+  padding: 0 40px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 107px;
+}
+
+.logo img {
+  width: 94px;
+  height: 94px;
+}
+
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.main-nav a {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text-light);
+  padding: 8px 20px;
+  border-radius: 11px;
+  transition: background-color 0.3s;
+}
+
+.main-nav a.active {
+  background-color: var(--bg-accent);
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.header-icons img {
+  height: 48px;
+}
+
+@media (max-width: 992px) {
+  .main-nav {
+    display: none; /* Hide nav on smaller screens, would be replaced by a hamburger menu */
+  }
+  .header-container {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 0 20px;
+  }
+  .main-nav a {
+    font-size: 24px;
+  }
+  .header-icons {
+    gap: 20px;
+  }
+  .header-icons img {
+    height: 36px;
+  }
+}
+
+
+
+.store-content {
+  padding: 22px 75px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 23px;
+}
+
+.store-profile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.store-logo-bg {
+  width: 104px;
+  height: 102px;
+}
+
+.store-name {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--text-dark);
+  margin-top: 19px;
+}
+
+.whatsapp-link {
+  position: absolute;
+  top: 0;
+  right: 55px;
+}
+
+.about-box {
+  background-color: var(--bg-light);
+  max-width: 1188px;
+  margin: 23px auto 0;
+  padding: 14px 26px;
+}
+
+.about-box p {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+.product-section {
+  margin-top: 18px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Bikin 3 kolom per baris */
+  gap: 25px; /* Jarak antar kartu */
+  justify-items: center; /* Biar rata tengah */
+  align-items: start;
+  margin-top: 30px;
+}
+
+.product-card {
+  background-color: var(--bg-light);
+  padding: 12px;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 360px; /* Batasi lebar maksimal tiap kartu */
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Tambah sedikit bayangan biar clean */
+}
+
+.product-image {
+  width: 93px;
+  height: 93px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.product-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-body);
+  line-height: 1.2;
+}
+
+.product-controls {
+  margin-top: 10px;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.quantity-btn img {
+  width: 17px;
+  height: 17px;
+  display: block;
+}
+
+.quantity-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.add-to-cart-btn {
+  background-color: var(--btn-primary);
+  color: var(--text-btn);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 2px 0;
+  width: 87px;
+  height: 21px;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .store-content {
+    padding: 20px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  .store-content {
+    padding: 20px;
+  }
+  .whatsapp-link {
+    top: auto;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+
+
+.site-footer {
+  background-color: var(--bg-dark);
+  height: 80px;
+  margin-top: 40px;
+}

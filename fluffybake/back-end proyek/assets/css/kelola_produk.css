@@ -1,0 +1,203 @@
+:root {
+  --color-background: #f5e9d8;
+  --color-primary: #5a3b2e;
+  --color-accent: #d49a64;
+  --color-white: #ffffff;
+  --color-text-dark: #000000;
+  --color-row-alt: #e0e0e0;
+  --font-main: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-background);
+}
+
+.product-list-section {
+  padding: 20px 40px 40px; 
+}
+
+.list-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.list-controls-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.list-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-primary);
+}
+
+.create-button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.product-table-wrapper {
+  width: 100%;
+  overflow: hidden; 
+  background-color: var(--color-white);
+  border-radius: 12px;
+}
+
+.product-table {
+  width: 100%;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 50px 180px 100px 110px 1fr 90px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.header-cell {
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 50px 180px 100px 110px 1fr 90px;
+  align-items: center;
+}
+
+.row-white {
+  background-color: #fff;
+}
+
+.row-gray {
+  background-color: var(--color-row-alt);
+}
+
+.table-cell {
+  padding: 10px;
+  font-size: 13px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-cell[data-label="Nama Produk"],
+.table-cell[data-label="Deskripsi Produk"] {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.cell-description {
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+.product-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.cell-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.cell-actions img {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .table-header {
+    display: none;
+  }
+
+  .table-row {
+    grid-template-columns: 1fr;
+    padding: 14px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+  }
+
+  .table-cell {
+    justify-content: space-between;
+    padding: 6px 0;
+  }
+
+  .table-cell::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  .table-cell[data-label="Gambar Produk"]::before {
+    display: none;
+  }
+}
+
+#product-list {
+  padding-left: 60px;   
+  padding-right: 40px;
+  padding-top: 25px;
+}
+
+#product-list .list-title {
+  font-size: 26px;      
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+#product-list .create-button {
+  font-size: 14px;
+  padding: 7px 16px;
+  border-radius: 10px;
+}
+
+#product-list .header-cell {
+  font-size: 14px;
+  padding: 12px;
+}
+
+#product-list .table-cell {
+  font-size: 14px;
+  padding: 14px 12px;   
+}
+
+#product-list .cell-description {
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+#product-list .product-image {
+  width: 70px;
+  height: 70px;
+}
+
+#product-list .list-controls-left {
+  flex-direction: column;     
+  align-items: flex-start;    
+  gap: 8px;                   
+}
+
+#product-list .create-button {
+  margin-top: 2px;            
+}

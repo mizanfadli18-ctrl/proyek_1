@@ -1,0 +1,254 @@
+:root {
+  --bg-color: #f5e9d8;
+  --card-bg-color: #ffffff;
+  --primary-text-color: #000000;
+  --secondary-text-color: #5a3b2e;
+  --button-bg-color: #fbdf05;
+  --button-text-color: #2b2b2b;
+  --footer-bg-color: #5a3b2e;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-family: 'Inter', sans-serif;
+  color: var(--primary-text-color);
+}
+
+.page-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 35px 10px; /* Padding utama 10px */
+  /* Hapus position: relative di sini, karena .page-header yang akan relatif */
+  /* position: relative; */ 
+}
+
+.content-wrapper {
+  max-width: 807px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.card {
+  background-color: var(--card-bg-color);
+  padding: 32px;
+  border-radius: 8px;
+}
+
+/* --- PERBAIKAN IKON BACK DIMULAI DI SINI --- */
+
+/* 1. Atur page-header sebagai INDUK RELATIF */
+.page-header {
+  position: relative; /* Penting untuk posisi absolut ikon back */
+  /* Atur padding yang diinginkan: 35px atas, 10px kiri/kanan, 0 bawah */
+  padding: 35px 10px 0 10px; 
+  height: auto;
+}
+
+/* 2. Hapus padding dari content-wrapper di dalam header */
+.page-header .content-wrapper {
+  padding: 0; /* Pastikan tidak ada padding ganda dari content-wrapper */
+  max-width: none; /* Biarkan konten header menggunakan lebar penuh page-header */
+  gap: 0;
+}
+
+/* 3. Terapkan POSISI ABSOLUT pada Ikon Back */
+.page-header .content-wrapper a {
+  position: absolute; /* Posisikan mutlak terhadap .page-header */
+  top: 35px; /* Sama dengan padding-top page-header */
+  left: 10px; /* Sama dengan padding-left page-header (Membuatnya mepet) */
+  z-index: 10;
+}
+
+.page-header img {
+  width: 25px;
+  height: 27px;
+}
+
+/* --- PERBAIKAN IKON BACK SELESAI --- */
+
+
+/* Payment Summary Section (dst, tidak ada perubahan) */
+#payment-summary {
+  padding: 23px 38px;
+}
+.summary-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--primary-text-color);
+  margin: 0 0 28px 0;
+}
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.item-details {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.item-image {
+  width: 92px;
+  height: 102px;
+  object-fit: cover;
+}
+.item-name, .item-quantity, .item-price {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--secondary-text-color);
+}
+.item-pricing {
+  display: flex;
+  align-items: center;
+  gap: 117px;
+}
+
+/* Payment Method Section */
+#payment-method {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+.section-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--primary-text-color);
+  margin: 0;
+}
+.payment-options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 73px;
+}
+.payment-form-card {
+  padding: 38px 56px;
+}
+.form-title {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--primary-text-color);
+  margin: 0 0 38px 0;
+  text-align: center;
+}
+.payment-form {
+  display: flex;
+  flex-direction: column;
+}
+.form-group {
+  margin-bottom: 38px;
+}
+.form-group label {
+  display: block;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--primary-text-color);
+  margin-bottom: 15px;
+}
+.form-input {
+    background-color: var(--bg-color);
+    padding: 17px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--primary-text-color);
+    
+    /* Tambahan khusus untuk elemen <input> agar tampilannya sama */
+    width: 100%; /* Agar input mengambil lebar penuh */
+    border: none; /* Hilangkan border bawaan dari input */
+    box-sizing: border-box; /* Pastikan padding tidak membuat lebar input melebihi parent */
+}
+.submit-button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 8px 0;
+  width: 157px;
+  font-size: 24px;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 29px;
+}
+
+/* Bank List Section */
+.bank-list-card {
+  padding: 23px 98px;
+}
+.bank-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.bank-item {
+  display: flex;
+  align-items: center;
+  gap: 115px;
+}
+.bank-item img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+.bank-item span {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--primary-text-color);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 20px 10px;
+  }
+  .content-wrapper {
+    gap: 30px;
+  }
+  .card {
+    padding: 20px;
+  }
+
+  /* Penyesuaian Mobile Header */
+  .page-header {
+      padding: 20px 10px 0 10px; /* Padding mobile: atas 20px, kiri 10px */
+  }
+
+  /* Penyesuaian Posisi Absolut Mobile */
+  .page-header .content-wrapper a {
+      top: 20px; /* Sama dengan padding-top mobile header */
+      left: 10px; /* Posisikan 10px dari tepi kiri */
+  }
+
+  /* Aturan lain untuk mobile */
+  .item-pricing {
+    gap: 30px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .payment-form-card {
+    padding: 20px;
+  }
+  .bank-list-card {
+    padding: 20px;
+  }
+  .bank-item {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+.page-footer {
+  background-color: var(--footer-bg-color);
+  height: 75px;
+  width: 100%;
+  margin-top: 179px;
+}

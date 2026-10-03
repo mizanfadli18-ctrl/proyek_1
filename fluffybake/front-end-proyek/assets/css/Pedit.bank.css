@@ -1,0 +1,210 @@
+:root {
+  --bg-color: #f2e5d7;
+  --primary-color: #5a3b2e;
+  --text-light: #ffffff;
+  --text-dark: #000000;
+  --card-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.page-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* ---------- HEADER ---------- */
+
+.site-header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  position: relative;
+  padding: 0 20px;
+}
+
+.back-button {
+  position: absolute;
+  left: 69px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.back-button img {
+  width: 27px;
+  height: 40px;
+}
+
+.header-title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 24px;
+  }
+  .back-button {
+    left: 20px;
+  }
+}
+
+/* ---------- MAIN CONTENT ---------- */
+
+.main-content {
+  max-width: 998px;
+  margin: 0 auto;
+  padding: 134px 20px 109px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-methods-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 72px;
+}
+
+.payment-method {
+  width: 100%;
+}
+
+.bank-info {
+  display: flex;
+  align-items: center; /* sejajarkan vertikal */
+  gap: 16px;
+  margin-bottom: 18px;
+  min-height: 60px; /* tambahkan tinggi minimal untuk stabil */
+}
+
+.bank-logo-container {
+  width: 110px;      /* kotak logo tetap */
+  height: 50px;      /* tinggi tetap */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: transparent;
+  line-height: 0;    /* hilangkan jarak bawaan dari img */
+}
+
+.bank-logo {
+  max-width: 100px;  /* batas lebar logo */
+  max-height: 40px;  /* batas tinggi logo */
+  width: auto;
+  height: auto;
+  object-fit: contain;   /* jaga proporsi */
+  object-position: center; /* tetap tengah */
+  display: block;
+}
+
+.bank-name {
+  font-size: 18px;
+  font-weight: 600;
+  flex: 1;
+  display: flex;
+  align-items: center; /* teks sejajar tengah juga */
+  height: 50px; /* samakan tinggi teks dengan container logo */
+}
+
+
+.account-number-box {
+  background-color: var(--card-bg);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 4px;
+}
+
+.account-number {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.save-button {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  width: 147px;
+  height: 47px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.save-button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 60px 20px;
+  }
+  .payment-methods-list {
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+  .bank-info {
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+  background-color: var(--primary-color);
+  height: 75px;
+}
+
+.account-number-box {
+  background-color: var(--card-bg);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.account-number {
+  font-size: 16px;
+  font-weight: 300;
+  border: none;
+  outline: none;
+  width: 100%;
+  background: transparent;
+  color: var(--text-dark);
+}
+
+.account-number:focus {
+  border: none;
+  outline: none;
+}

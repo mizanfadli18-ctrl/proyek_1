@@ -1,0 +1,123 @@
+:root {
+  --primary-bg: #f2e5d7;
+  --primary-dark: #5a3b2e;
+  --white: #ffffff;
+  --black: #000000;
+  --font-main: 'Inter', sans-serif;
+}
+
+/* BASE */
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--primary-bg);
+  color: var(--black);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ================= FORM SECTION ================= */
+.profile-form-section {
+  padding: 30px 20px 60px;
+  position: relative;
+}
+
+/* BACK BUTTON (DIPERBAIKI) */
+.back-link {
+  position: absolute;
+  top: 24px;        /* TURUN */
+  left: 40px;
+}
+
+.back-arrow-icon {
+  width: 26px;      /* DIPERKECIL */
+  height: auto;
+  cursor: pointer;
+}
+
+/* WRAPPER FORM */
+.form-wrapper {
+  max-width: 720px;     /* 🔥 INI KUNCI: form lebih kecil */
+  margin: 0 auto;
+}
+
+/* AVATAR */
+.profile-avatar-container {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+/* ================= FORM ================= */
+.edit-profile-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* GROUP */
+.form-group {
+  margin-bottom: 16px;     /* JARAK LEBIH ENAK */
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 14px;         /* DIPERKECIL */
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background-color: var(--white);
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;         /* DIPERKECIL */
+  padding: 10px 12px;
+  color: var(--primary-dark);
+}
+
+/* FOCUS */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-dark);
+  box-shadow: 0 0 4px rgba(90, 59, 46, 0.2);
+}
+
+/* ================= BUTTON ================= */
+.submit-button {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  font-size: 14px;         /* DIPERKECIL */
+  font-weight: 600;
+  border: none;
+  width: 140px;
+  height: 42px;
+  margin: 40px auto 0;     /* NAIK KE ATAS */
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #7b5439;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .form-wrapper {
+    max-width: 100%;
+  }
+
+  .back-link {
+    position: static;
+    margin-bottom: 16px;
+  }
+}

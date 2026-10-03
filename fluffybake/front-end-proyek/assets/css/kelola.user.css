@@ -1,0 +1,278 @@
+:root {
+  --bg-light: #f5e9d8;
+  --bg-dark: #5a3b2e;
+  --text-dark: #462e23;
+  --text-light: #ffffff;
+  --text-muted: #8e8e8e;
+  --text-accent: #e6ad8a;
+  --text-slogan: #7c7c7c;
+  --text-black: #000000;
+  --bg-white: #ffffff;
+}
+
+/* RESET & GLOBAL STYLE */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* DASHBOARD LAYOUT */
+.dashboard-container {
+  display: flex;
+  max-width: 1440px;
+  min-height: 824px;
+  margin: auto;
+  background-color: var(--bg-light);
+}
+
+/* SIDEBAR */
+.sidebar {
+  flex-shrink: 0;
+  width: 296px;
+  background-color: var(--bg-dark);
+  padding: 20px 16px 10px; /* kecilkan agar konten naik */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* LOGO DAN TEKS */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px; /* jarak kecil agar menu lebih ke atas */
+}
+
+.logo-img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-family: 'Rowdies', cursive;
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--text-accent);
+  margin-bottom: -2px;
+}
+
+.brand-slogan {
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--text-slogan);
+}
+
+/* NAVIGASI */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 0 10px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--text-muted);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-link.active {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  flex-grow: 1;
+  padding: 60px 72px 50px;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.page-title {
+  font-weight: 700;
+  font-size: 42px;
+  color: var(--text-dark);
+  line-height: 1.4;
+}
+
+.add-user-btn {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 26px;
+  padding: 8px 20px;
+  border-radius: 10px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* TABEL */
+.table-container {
+  background-color: var(--bg-white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 90px 1.5fr 2fr 1fr 1fr 1.2fr;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.table-header {
+  background-color: var(--bg-dark);
+  min-height: 61px;
+}
+
+.table-header .table-cell {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--text-black);
+}
+
+.table-row {
+  min-height: 75px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table-body .table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row .table-cell {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--text-black);
+}
+
+/* TOMBOL AKSI */
+.actions-cell {
+  display: flex;
+  gap: 6px;
+}
+
+.action-btn {
+  border: none;
+  padding: 4px 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.edit-btn {
+  background-color: var(--bg-light);
+  color: var(--text-black);
+}
+
+.delete-btn {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .main-content {
+    padding: 40px;
+  }
+  .page-title {
+    font-size: 32px;
+  }
+  .add-user-btn {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 992px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 15px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sidebar-header {
+    margin-bottom: 0;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 15px;
+    padding: 0;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .table-header {
+    display: none;
+  }
+
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 15px;
+    border-bottom: 2px solid var(--bg-light);
+  }
+
+  .table-cell {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .table-cell::before {
+    content: attr(data-label);
+    font-weight: 700;
+    margin-right: 10px;
+  }
+
+  .actions-cell {
+    justify-content: flex-end;
+  }
+}

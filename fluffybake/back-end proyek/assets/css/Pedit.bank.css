@@ -1,0 +1,143 @@
+:root {
+  --bg-main: #f2e5d7;
+  --bg-dark: #5a3b2e;
+  --text-dark: #2b2b2b;
+  --text-light: #ffffff;
+  --card-bg: #ffffff;
+  --border-soft: #e2d6c8;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+}
+
+/* ================= PAGE ================= */
+#section-main {
+  padding: 32px 20px 70px;
+}
+
+/* ================= HEADER ================= */
+.page-header {
+  max-width: 760px;              
+  margin: 0 auto 26px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-title {
+  font-size: 20px;               
+  font-weight: 700;
+  color: var(--bg-dark);
+}
+
+/* BACK BUTTON */
+.page-header .back-link {
+  position: absolute;
+  left: 0;
+}
+
+.page-header .back-link img {
+  width: 22px;                   
+  cursor: pointer;
+}
+
+/* ================= CONTENT ================= */
+.main-content {
+  max-width: 760px;              
+  margin: 0 auto;
+}
+
+/* LIST */
+.payment-methods-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;                     
+}
+
+/* ================= CARD BANK ================= */
+.payment-method {
+  background: var(--card-bg);
+  padding: 16px 18px;            
+  border-radius: 12px;
+  border: 1px solid var(--border-soft);
+}
+
+/* BANK INFO */
+.bank-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.bank-logo {
+  width: 56px;                   
+  object-fit: contain;
+}
+
+.bank-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ================= INPUT ================= */
+.account-number-box {
+  background-color: #fafafa;
+  border: 1px solid #d8cfc4;
+  border-radius: 8px;
+  padding: 8px 12px;             
+}
+
+.account-number {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;               
+  color: var(--text-dark);
+}
+
+/* ================= BUTTON ================= */
+.save-button {
+  margin: 30px auto 0;
+  display: block;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 34px;           
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #7a533a;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .page-header,
+  .main-content {
+    max-width: 100%;
+  }
+
+  .page-title {
+    font-size: 18px;
+  }
+
+  .bank-logo {
+    width: 50px;
+  }
+}

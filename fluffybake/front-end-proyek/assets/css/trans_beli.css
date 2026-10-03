@@ -1,0 +1,227 @@
+:root {
+  --bg-color: #f5e9d8;
+  --card-bg-color: #ffffff;
+  --primary-text-color: #000000;
+  --secondary-text-color: #5a3b2e;
+  --button-bg-color: #fbdf05;
+  --button-text-color: #2b2b2b;
+  --footer-bg-color: #5a3b2e;
+}
+
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-family: 'Inter', sans-serif;
+  color: var(--primary-text-color);
+}
+
+/* ===== PAGE WRAPPER ===== */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 16px;
+}
+
+.content-wrapper {
+  max-width: 720px; /* 🔥 diperkecil supaya rapi */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background-color: var(--card-bg-color);
+  padding: 28px;
+  border-radius: 10px;
+}
+
+/* ===== HEADER & BACK ===== */
+.page-header {
+  position: relative;
+  padding: 24px 16px 0;
+}
+
+.page-header a {
+  position: absolute;
+  top: 24px;
+  left: 16px;
+}
+
+.page-header img {
+  width: 24px;
+}
+
+/* ===== TOTAL PEMBAYARAN ===== */
+#payment-summary {
+  padding: 24px 28px;
+}
+
+.summary-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.item-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.item-image {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.item-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--secondary-text-color);
+}
+
+.item-pricing {
+  display: flex;
+  gap: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--secondary-text-color);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* ===== METODE PEMBAYARAN ===== */
+#payment-method {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.payment-options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* 🔥 jarak form & bank */
+}
+
+/* ===== FORM ===== */
+.payment-form-card {
+  padding: 28px;
+}
+
+.form-title {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.form-input {
+  width: 100%;
+  background-color: #ffffff; /* 🔥 PUTIH */
+  padding: 12px 14px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.submit-button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+/* ===== BANK LIST ===== */
+.bank-list-card {
+  padding: 24px;
+}
+
+.bank-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bank-item {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.bank-item img {
+  width: 70px;
+  object-fit: contain;
+}
+
+.bank-item span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ===== FOOTER DIHILANGKAN ===== */
+.page-footer {
+  display: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .content-wrapper {
+    max-width: 100%;
+    gap: 28px;
+  }
+
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .item-pricing {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}
